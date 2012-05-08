@@ -11,12 +11,12 @@ public class FlexibleDateParser extends DateParser {
 	
 	public FlexibleDateParser(Collection<DateParser> dataParsers)
 	{
-		this.dateParsers = dataParsers;
+		this.setDateParsers(dataParsers);
 	}
 	
 	@Override
 	public Date parse(String dateString){
-		for (DateParser dp : this.dateParsers) {
+		for (DateParser dp : this.getDateParsers()) {
 			try {
 				return dp.parse(dateString);
 			} catch (DateParserException e) {
@@ -25,6 +25,14 @@ public class FlexibleDateParser extends DateParser {
 		}
 		
 		throw new DateParserException("No se pudo parsear la fecha con ninguno de los formatos disponibles");		
+	}
+
+	private void setDateParsers(Collection<DateParser> dateParsers) {
+		this.dateParsers = dateParsers;
+	}
+
+	private Collection<DateParser> getDateParsers() {
+		return dateParsers;
 	}
 	
 }
