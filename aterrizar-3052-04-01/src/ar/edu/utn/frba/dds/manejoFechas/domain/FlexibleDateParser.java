@@ -5,7 +5,7 @@ import java.util.Date;
 
 import ar.edu.utn.frba.dds.manejoFechas.exceptions.DateParserException;
 
-public class FlexibleDateParser extends DateParser {
+public class FlexibleDateParser implements DateParser {
 
 	private Collection<DateParser> dateParsers;
 	

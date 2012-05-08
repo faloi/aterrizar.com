@@ -16,8 +16,8 @@ public class DateTime {
 		this.date = new GregorianCalendar(anio, mes - 1, dia).getTime();
 	}	
 	
-	public DateTime(DateParser dateParser, String dateString) {
-		this.date = dateParser.parse(dateString);  
+	public DateTime(DateParser simpleDateParser, String dateString) {
+		this.date = simpleDateParser.parse(dateString);  
 	}
 	
 	public long diasDeDiferenciaCon(DateTime unaFecha){
