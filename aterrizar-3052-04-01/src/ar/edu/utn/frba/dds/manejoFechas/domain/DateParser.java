@@ -18,15 +18,6 @@ public abstract class DateParser {
 		}
 	}
 
-	public boolean canParse(String dateString) {
-		try {
-			this.parse(dateString);
-			return true;
-		} catch (DateParserException e) {
-			return false;
-		}
-	}
-	
 	protected void setPattern(String pattern) {
 		this.pattern = pattern;
 	}
