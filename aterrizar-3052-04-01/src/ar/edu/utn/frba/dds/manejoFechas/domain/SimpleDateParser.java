@@ -14,6 +14,14 @@ public class SimpleDateParser implements DateParser {
 		this.setPattern(pattern);
 	}
 
+	protected void setPattern(String pattern) {
+		this.pattern = pattern;
+	}
+	
+	protected String getPattern() {
+		return pattern;
+	}
+	
 	@Override
 	public Date parse(String dateString) {
 		try {
@@ -23,14 +31,6 @@ public class SimpleDateParser implements DateParser {
 		}
 	}
 
-	protected void setPattern(String pattern) {
-		this.pattern = pattern;
-	}
-
-	protected String getPattern() {
-		return pattern;
-	}
-	
 	
 	//TODO: tiene que haber una forma mejor de resolver esto...
 	

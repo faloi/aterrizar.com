@@ -1,6 +1,5 @@
 package ar.edu.utn.frba.dds.manejoFechas;
 
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 import junit.framework.Assert;

@@ -4,6 +4,6 @@ import java.util.Date;
 
 public interface DateParser {
 
-	public abstract Date parse(String dateString);
+	public Date parse(String dateString);
 
 }
